@@ -1,42 +1,86 @@
-TaskWarden
-TaskWarden is a powerful, feature-rich CLI-based TODO app designed to manage your tasks with ease and efficiency. Built with Go/Rust, TaskWarden offers advanced task management, integration capabilities, and a customizable user experience, all while being lightweight and secure.
+# TaskWarden
 
-Features
-1. Advanced Task Management
-Subtasks and Projects: Organize your tasks with subtasks and project groups.
-Priority Levels and Due Dates: Set priorities and deadlines for tasks, with colored labels and filtered views.
-Recurring Tasks: Create tasks that recur on a daily, weekly, or monthly basis.
-Tags/Categories: Tag tasks with custom labels or categories for better organization.
-2. Integration with Other Tools
-Calendar Syncing: Sync tasks with Google Calendar or Outlook.
-API Integration: Interact with tasks programmatically via a REST or GraphQL API.
-Notifications and Reminders: Receive notifications via desktop, email, or SMS.
-3. Customization and User Experience
-Customizable Themes: Choose from light/dark modes and custom color schemes.
-Interactive UI Elements: Utilize interactive elements like progress bars and live-updating views with Bubbletea.
-Configurable Keybindings: Customize keybindings for a personalized user experience.
-4. Collaboration Features
-Shared Task Lists: Collaborate on shared task lists with multiple users.
-Task Comments and History: Comment on tasks and view a history log of changes.
-5. Offline Support and Syncing
-Local Storage with Syncing: Work offline with local storage, syncing to the cloud when connected.
-Conflict Resolution: Handle conflicts intelligently when syncing across devices or users.
-6. Performance and Security
-Encrypted Storage: Securely store tasks with encryption.
-Fast and Lightweight: Keep the app fast and responsive with minimal dependencies.
-Cross-Platform Compatibility: Run smoothly on macOS, Linux, and Windows.
-7. Go/Rust Features
-Rust: Performance and Safety: Leverage Rust’s memory safety and concurrency features.
-Go: Concurrency and Simplicity: Showcase Go’s simplicity and powerful concurrency with background tasks.
-8. Extensibility
-Plugin System: Extend functionality with a plugin system.
-Custom Scripting: Automate workflows with custom scripts interacting with the TODO list.
-9. Documentation and Community
-Comprehensive Documentation: Clear, detailed documentation with examples.
-Contributing Guide: Encourage contributions with a well-written guide.
-Community Support: Foster a community with forums or GitHub Discussions.
-10. Showcasing Your Skills
-Code Quality: Write clean, idiomatic code following best practices.
-Testing: Implement a robust suite of tests, including unit, integration, and property-based testing.
-CI/CD Pipeline: Automate builds, tests, and deployments with a CI/CD pipeline.
-Packaging: Provide clear installation instructions using Homebrew and other package managers.
+**TaskWarden** is a command-line task management tool written in Go. It allows you to create, list, mark as done, and delete tasks. TaskWarden uses a simple file-based storage system to persist tasks between sessions.
+
+## Features
+
+- **Add a Task**: Create new tasks with a simple command.
+- **List Tasks**: Display all tasks, showing their completion status.
+- **Mark a Task as Done**: Mark a task as completed by its ID.
+- **Delete a Task**: Remove a task by its ID.
+- **Persistent Storage**: Tasks are saved to a `tasks.json` file and persist between runs.
+
+## Installation
+
+To use TaskWarden, you need to have [Go](https://golang.org/) installed on your system. Once you have Go set up, you can clone the repository and run the application directly.
+
+```bash
+git clone https://github.com/yourusername/TaskWarden.git
+cd TaskWarden
+```
+
+## Usage
+
+TaskWarden is a CLI tool with the following commands:
+
+### 1. Add a Task
+
+To add a new task, use the `add` command followed by the task description:
+
+```bash
+go run cmd/taskwarden/main.go add "Buy groceries"
+```
+
+This command will add the task "Buy groceries" to your task list.
+
+### 2. List Tasks
+
+To list all tasks, use the `list` command:
+
+```bash
+go run cmd/taskwarden/main.go list
+```
+
+This will display all tasks along with their IDs and completion status.
+
+### 3. Mark a Task as Done
+
+To mark a task as done, use the `done` command followed by the task ID:
+
+```bash
+go run cmd/taskwarden/main.go done 1
+```
+
+This will mark the task with ID 1 as completed.
+
+### 4. Delete a Task
+
+To delete a task, use the `delete` command followed by the task ID:
+
+```bash
+go run cmd/taskwarden/main.go delete 1
+```
+
+This will delete the task with ID 1 from your list.
+
+## File-Based Storage
+
+Tasks are stored in a file called `tasks.json` located in the root of the project directory. This file is automatically created and updated by TaskWarden as you add, complete, or delete tasks.
+
+## Running Tests
+
+To run the test suite, use the `go test` command. This will execute all tests in the `internal/task` package.
+
+```bash
+go test -v ./internal/task
+```
+
+The tests cover all the core functionalities of TaskWarden, including adding tasks, listing tasks, marking them as done, and deleting them.
+
+## Contribution
+
+Contributions are welcome! If you have any ideas for new features or improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
