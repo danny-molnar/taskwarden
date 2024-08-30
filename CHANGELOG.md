@@ -1,5 +1,7 @@
 # Changelog
 
+## [v0.1.1](https://github.com/danny-molnar/taskwarden/compare/v0.1.0...v0.1.1) - 2024-08-30
+
 ## [v0.1.0](https://github.com/danny-molnar/taskwarden/compare/v0.0.1...v0.1.0) - 2024-08-30
 - Feat: Added basic create/list/add/delete task functionality w/ file saving by @danny-molnar in https://github.com/danny-molnar/taskwarden/pull/9
 
