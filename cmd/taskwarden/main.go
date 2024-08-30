@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/danny-molnar/TaskWarden/internal/task"
+	"github.com/danny-molnar/taskwarden/internal/task"
 )
 
 func main() {
