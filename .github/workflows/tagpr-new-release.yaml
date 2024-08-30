@@ -8,6 +8,8 @@ on:
 
 jobs:
   cd-new-tagged-release:
+    permissions: write-all
+
     runs-on: ubuntu-latest
 
     steps:
