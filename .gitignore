@@ -49,3 +49,6 @@ Icon
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Temporary files
+*.json
