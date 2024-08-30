@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  run-go-tests:
+  ci-run-go-tests:
     runs-on: ubuntu-latest
 
     steps:
